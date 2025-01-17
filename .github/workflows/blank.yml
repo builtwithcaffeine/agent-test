@@ -1,0 +1,16 @@
+name: Test Agent Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-agent-deployment:
+    runs-on: self-hosted
+    steps:
+      - name: Test Agent Deployment
+        run: |
+          echo "Hello, This executed! $(date)"
+          echo "Agent Pool: Self Hosted Agents"
+          echo "Agent Host: ${{ runner.name }}"
